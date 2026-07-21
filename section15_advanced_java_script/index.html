@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Random number generator</h1>
+    <p> Click on the screen to change the number</p>
+    <p id="number"> number</p>
+</body>
+
+<style>
+    *{
+        text-align: center;
+    }
+
+    body{
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    
+</style>
+<script>
+    function updateNumber(){
+        document.querySelector("#number").innerHTML = Math.floor(Math.random() * 100)
+    }
+
+    document.addEventListener("click", updateNumber)</script>
+</html>
