@@ -19,8 +19,8 @@
 <body id="result">
 
     <h2>find out how well you and your lover are compatible</h2>
-     <p>you and your lover</p>
- 
+     <p id="p">you and your lover</p>
+    <p id="message"></p>
 
 
 <a href="index.html"><button>Try again</button></a>
@@ -29,9 +29,59 @@
 <script>
     n = Math.floor(Math.random() * 100) + 1
 
+
+
     document.addEventListener('DOMContentLoaded', function(){
-        document.querySelector("p").textContent = `Your chances are ${n}%`  
+        document.querySelector("#p").textContent = `Your chances are ${n}%`  
     })
+    
+if (n <= 25){document.querySelector("#message").textContent = "Not very loving. maybe next time"} ;
+if (n > 25 && n < 40){document.querySelector("#message").textContent = "Almost there !"}
+if (n >=40 && n < 50){document.querySelector("#message").textContent = "It could work !"}
+if (n >= 50 && n< 70){document.querySelector("#message").textContent = "What a great pair!"}
+if (n >=70 && n < 80){document.querySelector("#message").textContent = "You're like soulmates !"}
+if (n >= 80 ){document.querySelector("#message").textContent = "Love's in the air!"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
