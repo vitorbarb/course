@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+
+    <p>Whos going to the party?</p>
+    <p id="guestlist"> </p>
+
+
+<p>   How many people will be there</p> 
+    <p id="number"></p>
+
+    <p> Who is the best there?</p>
+    
+
+    <p id="thebest"></p>
+
+
+
+    <p> Is Troye invited ?</p>
+    <p id="istroyethere"></p>
+
+
+    <p> Is Fka twigs invited?</p>
+
+    <p id="istwigsthere"></p>
+
+    <button id="areyou" onclick="promptt()">Are you invited?</button>
+    <p id="areyouu"> are you? click to find out</p>
+    <script>
+    var guestList = ["Charli XCX", "Lorde", "Troye"]
+        document.querySelector("#guestlist").innerHTML = guestList;
+
+    var peopleThere = guestList.length;
+        document.querySelector("#number").innerHTML = peopleThere
+        
+
+    var theBest = guestList[0]
+        document.querySelector("#thebest").innerHTML = theBest
+
+    if (guestList.includes("Troye")){
+        document.querySelector("#istroyethere").innerHTML = "yes"
+    }
+    
+    if (guestList.includes("Twigs")){
+        document.querySelector("#istwigsthere").innerHTML = "yes"
+
+    } else{
+        document.querySelector("#istwigsthere").innerHTML = "no"
+    }
+
+function promptt(){
+    alert("func is on")
+    let yourName = prompt("Baby what is your name?");
+    if (guestList.includes(yourName)){
+        document.querySelector("#areyouu").innerHTML = `Yas queen, you ${yourName} is invited `
+    }}
+    
+    </script>
+</body>
+</html>
