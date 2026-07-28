@@ -6,13 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-
+<button onclick="incr()" >Click to play fizzbuzz</button>
     <p id="fizzbuzz"></p>
     <script>
         output = []
         var n = 1;
-         while (n <= 100){
-            
+        
+        function incr(){
+
             if(n % 3 === 0 && n % 5 === 0){
                 output.push("Fizzbuzz")}
             else if (n % 5 === 0){
@@ -26,8 +27,14 @@
             
             output.push(n)
         }
-    n += 1
-    }
+ n ++;
+  document.querySelector("#fizzbuzz").innerHTML = output
+           
+        }
+
+            
+      
+
         
     document.querySelector("#fizzbuzz").innerHTML = output
 
