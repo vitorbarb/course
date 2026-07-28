@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lyrics of the song bottles of bear</h1>
+    <p id="lyrics">bottles of beer on the wall.
+99 bottles of beer.
+Take one down, pass it around,
+98 bottles of beer on the wall. </br> </p>
+
+    <script>
+        var n = 99;
+        while (n >= 1){
+            document.querySelector("#lyrics").innerText += `bottles of beer on the wall.${n} bottles of beer.Take one down, pass it around, ${n -1} bottles of beer on the wall. \n`
+            
+            
+            
+            n --;
+        }
+    </script>
+</body>
+</html>
